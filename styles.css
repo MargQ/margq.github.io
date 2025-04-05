@@ -227,13 +227,11 @@
 }
 
 .hard-skills li:before {
-    content: "⚙️";
     color: var(--primary);
     left: 5px;
 }
 
 .soft-skills li:before {
-    content: "💡";
     color: var(--primary);
     left: 5px;
 }
