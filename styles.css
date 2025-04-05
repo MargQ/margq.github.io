@@ -1,16 +1,16 @@
-/* Основные цвета */
+/* Основные цвета (оставляем как было) */
 :root {
-    --primary: #4CAF50; /* Зеленый вместо синего */
-    --secondary: #2E7D32; /* Темно-зеленый */
-    --background: #f5f5f5; /* Серый фон */
-    --card-bg: #ffffff; /* Белый для карточек */
+    --primary: #4CAF50;
+    --secondary: #2E7D32;
+    --background: #f5f5f5;
+    --card-bg: #ffffff;
     --text: #333333;
     --light-text: #757575;
   }
   
-  /* Основные параметры страницы */
+  /* Обновленные базовые стили */
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 20px;
     background-color: var(--background);
@@ -19,71 +19,90 @@
     align-items: center;
     min-height: 100vh;
     color: var(--text);
+    line-height: 1.6;
   }
   
-  /* Шапка */
+  /* Новая шапка с акцентным дизайном */
   .site-header {
     width: 100%;
     text-align: center;
-    background-color: var(--primary);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     color: white;
-    padding: 15px 0;
-    font-size: 26px;
-    font-weight: bold;
+    padding: 25px 0;
+    font-size: 28px;
+    font-weight: 600;
     position: sticky;
     top: 0;
     z-index: 10;
     margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    letter-spacing: 1px;
   }
   
-  /* Контейнер */
+  /* Обновленный контейнер с новой тенью */
   .container {
     max-width: 700px;
     width: 100%;
     background: var(--card-bg);
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Заголовки */
-  h2 {
-    font-size: 20px;
-    border-bottom: 3px solid var(--primary);
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-    color: var(--secondary);
-  }
-  
-  /* Блоки резюме */
-  .resume-section {
-    margin-bottom: 25px;
-    padding: 15px;
-    background: var(--card-bg);
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  }
-  
-  /* Контакты и заголовок */
-  .resume-header {
-    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
     margin-bottom: 30px;
   }
   
-  .resume-header h2 {
-    font-size: 28px;
+  /* Стили для заголовков с акцентом */
+  h2 {
+    font-size: 22px;
+    border-left: 5px solid var(--primary);
+    padding-left: 15px;
+    margin: 30px 0 20px;
+    color: var(--secondary);
+    font-weight: 600;
     border-bottom: none;
-    margin-bottom: 5px;
+    display: block;
+  }
+  
+  /* Карточки секций с обновленным дизайном */
+  .resume-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .resume-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  }
+  
+  /* Заголовок резюме с новым стилем */
+  .resume-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  
+  .resume-header h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    border-left: none;
+    padding-left: 0;
+    color: var(--text);
+    font-weight: 700;
   }
   
   .description {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--light-text);
-    font-style: italic;
+    font-style: normal;
+    font-weight: 300;
   }
   
-  /* Списки */
+  /* Обновленные списки с иконками */
   ul {
     list-style: none;
     padding: 0;
@@ -91,93 +110,141 @@
   }
   
   ul li {
-    padding: 8px 0;
-    border-bottom: 1px solid #eee;
+    padding: 12px 0 12px 30px;
+    border-bottom: 1px solid #f0f0f0;
     position: relative;
-    padding-left: 20px;
+    transition: all 0.3s;
+  }
+  
+  ul li:hover {
+    background-color: #f9f9f9;
   }
   
   ul li:before {
-    content: "•";
+    content: "▹";
     color: var(--primary);
     position: absolute;
-    left: 0;
+    left: 10px;
+    font-size: 18px;
   }
   
-  /* Блок интересов (новый) */
+  /* Блок интересов с новым дизайном */
   .interests {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 8px;
+    margin-top: 15px;
   }
   
   .interest-tag {
     background-color: #E8F5E9;
     color: var(--secondary);
-    padding: 5px 10px;
-    border-radius: 15px;
+    padding: 8px 15px;
+    border-radius: 20px;
     font-size: 14px;
+    font-weight: 500;
+    border: 1px solid rgba(46, 125, 50, 0.2);
+    transition: all 0.3s;
   }
   
-  /* Кнопка */
+  .interest-tag:hover {
+    background-color: #C8E6C9;
+    transform: scale(1.05);
+  }
+  
+  /* Новая кнопка с анимацией */
   button {
-    background-color: var(--primary);
+    background: linear-gradient(to right, var(--primary), var(--secondary));
     color: white;
     border: none;
-    padding: 12px 25px;
+    padding: 14px 30px;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s;
     display: block;
-    margin: 30px auto 0;
+    margin: 40px auto 0;
     width: auto;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    position: relative;
+    overflow: hidden;
   }
   
   button:hover {
-    background-color: var(--secondary);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
   }
   
-  /* Эффект ripple */
-  .ripple {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 50%;
-    transform: scale(0);
-    animation: rippleEffect 0.6s linear;
+  button:active {
+    transform: translateY(1px);
   }
   
-  @keyframes rippleEffect {
-    to {
-      transform: scale(4);
-      opacity: 0;
-    }
-  }
-  
-  /* Редактируемые поля */
+  /* Редактируемые поля с новым стилем */
   [contenteditable="true"] {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px dashed #ddd;
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
     min-height: 1em;
-    margin: 5px 0;
-    transition: all 0.2s;
+    margin: 8px 0;
+    transition: all 0.3s;
+    background-color: #fafafa;
   }
   
   [contenteditable="true"]:focus {
-    border: 1px dashed var(--primary);
+    border: 1px solid var(--primary);
     outline: none;
-    background-color: #F1F8E9;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
   }
   
   [contenteditable][data-placeholder]:empty:before {
     content: attr(data-placeholder);
-    color: #aaa;
+    color: #bdbdbd;
     font-style: italic;
+    font-weight: 300;
   }
+
+  /* Skills Section Styles */
+.skills-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.skills-column {
+    flex: 1;
+}
+
+.skills-column h3 {
+    font-size: 18px;
+    color: var(--secondary);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #E8F5E9;
+    font-weight: 600;
+}
+
+.hard-skills li:before {
+    content: "⚙️";
+    color: var(--primary);
+    left: 5px;
+}
+
+.soft-skills li:before {
+    content: "💡";
+    color: var(--primary);
+    left: 5px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 600px) {
+    .skills-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
   
   /* Адаптивность */
   @media (max-width: 768px) {
@@ -187,9 +254,20 @@
     
     .container {
       padding: 20px;
+      border-radius: 8px;
     }
     
     .site-header {
       font-size: 22px;
+      padding: 20px 0;
+    }
+    
+    .resume-header h2 {
+      font-size: 26px;
+    }
+    
+    button {
+      padding: 12px 25px;
+      font-size: 15px;
     }
   }
