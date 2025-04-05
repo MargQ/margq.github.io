@@ -1,39 +1,76 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Моё резюме</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="resume-container">
-    <div class="resume" id="resume-content">
-      <h1 contenteditable="true">[Ваше имя]</h1>
-      <div class="section" contenteditable="true">
-        <h2>Опыт работы</h2>
-        <p>[Должность], [Компания] ([Годы])</p>
-        <ul>
-          <li>[Обязанность 1]</li>
-          <li>[Обязанность 2]</li>
-        </ul>
-      </div>
-      <div class="section" contenteditable="true">
-        <h2>Образование</h2>
-        <p>[Учебное заведение], [Специальность] ([Годы])</p>
-      </div>
-      <div class="section" contenteditable="true">
-        <h2>Навыки</h2>
-        <ul>
-          <li>[Навык 1]</li>
-          <li>[Навык 2]</li>
-          <li>[Навык 3]</li>
-        </ul>
-      </div>
+    <header class="site-header">
+        <h1>Resume</h1>
+    </header>
+
+    <div class="container">
+        <div class="resume">
+            <header class="resume-header">
+                <h2 contenteditable="true" data-placeholder="Enter your full name"></h2>
+                <p class="description" contenteditable="true" data-placeholder="Briefly describe yourself">
+                    
+                </p>
+            </header>
+
+            <div class="resume-section">
+                <h2>Contacts</h2>
+                <p contenteditable="true" data-placeholder="Enter your email"></p>
+                <p contenteditable="true" data-placeholder="Enter your Phone"></p>
+            </div>
+
+            <div class="resume-section languages-section">
+                <h2>Languages</h2>
+                <div class="language-item">
+                    <h3 contenteditable="true" data-placeholder="Primary language"></h3>
+                    <p contenteditable="true" data-placeholder="Others languages"></p>
+                </div>
+            </div>
+
+            <div class="resume-section">
+                <h2>Work experience</h2>
+                <p contenteditable="true" data-placeholder="Your work experience"></p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Education</h2>
+                <p contenteditable="true" data-placeholder="Enter your education">
+                    
+                </p>
+            </div>
+
+            <div class="resume-section">
+                <h2>Skills</h2>
+                <ul>
+                    <li contenteditable="true" data-placeholder="Enter your skill"></li>
+                    <li contenteditable="true" data-placeholder="Enter your skill"></li>
+                    <li contenteditable="true" data-placeholder="Enter your skill"></li>
+                </ul>
+            </div>
+
+            <!--блок интересов -->
+            <div class="resume-section">
+                <h2>Interests</h2>
+                <div class="interests">
+                    <span class="interest-tag" contenteditable="true">For example, "Design"</span>
+                    <span class="interest-tag" contenteditable="true">For example "Photography"</span>
+                    <span class="interest-tag" contenteditable="true">For example "AI"</span>
+                </div>
+            </div>
+
+            <button id="download-pdf">📄 Download PDF</button>
+        </div>
     </div>
-    <button id="download-pdf" class="wave-effect">Скачать PDF</button>
-  </div>
-  <script src="script.js"></script>
+
+    <!-- Подключение jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
